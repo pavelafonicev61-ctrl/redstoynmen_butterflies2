@@ -23,10 +23,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Собрать мод
-        run: gradle build
+        run: cd redstoynmen_butterflies_FIXED_FOR_GITHUB && gradle build
 
       - name: Загрузить JAR
         uses: actions/upload-artifact@v4
         with:
           name: redstoynmen-butterflies
-          path: build/libs/*.jar
+          path: redstoynmen_butterflies_FIXED_FOR_GITHUB/build/libs/*.jar
